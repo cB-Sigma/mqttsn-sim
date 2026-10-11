@@ -18,12 +18,17 @@ gateway (interop/). One change came from it: `Connect` returns
 `ErrDisconnected` when a gateway answers the connection exchange with
 DISCONNECT.
 
+On 2026-10-12 (v0.2.0) the clients moved back into the mqttsn module's
+`client` package as the library's clients; sim.go and client2.go here
+now wrap them with the fault switches, and sim/gateway.go wraps the
+mqttsn module's gateway.
+
 ## Sources
 
 | Area (files) | Followed |
 |---|---|
-| 1.2 client (sim/sim.go) | MQTT-SN 1.2, clause 6 (the client side of each procedure) |
-| 2.0 client (sim/client2.go) | the 2.0 draft, client side; SCRAM through iotcrypto's sasl package |
+| Clients and fault switches (sim/sim.go, sim/client2.go) | the mqttsn module's client package |
+| Gateway (sim/gateway.go) | the mqttsn module's gateway package |
 | Command (cmd/mqttsnsim) | none (flags are our own) |
 | Interop peers (interop/peer) | Paho's gateway.conf and predefinedTopic.conf formats and its sample clients' command lines, read to write our settings and start script |
 

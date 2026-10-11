@@ -2,12 +2,10 @@ module github.com/cB-Sigma/mqttsn-sim
 
 go 1.26.0
 
-require (
-	github.com/cB-Sigma/iotcrypto v0.2.0
-	github.com/cB-Sigma/mqttsn v0.1.0
-)
+require github.com/cB-Sigma/mqttsn v0.2.0
 
 require (
+	github.com/cB-Sigma/iotcrypto v0.2.0 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.2.0 // indirect
 	github.com/xdg-go/stringprep v1.0.4 // indirect

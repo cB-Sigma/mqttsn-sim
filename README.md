@@ -20,10 +20,14 @@ has no dependency on it.
 |---|---|
 | `sim` (1.2) | `Dial`, `DialFrom`, `SearchGW`; `Client.Connect` (with a `Will`), `Register`, `Publish`, `Subscribe`, `Unsubscribe`, `Ping`, `Sleep`, `Wake`, `Disconnect`, `Request`, `Send`; deliveries on `Messages`; `Silence`, `Congest` |
 | `sim` (2.0) | `Dial2`; `Client2.Connect`, `ConnectSCRAM`, `ReauthSCRAM`, `Register`, `Publish`, `PubWOS`, `Subscribe`, `Unsubscribe`, `Ping`, `Sleep`, `Wake`, `Disconnect`; `Protect` for the Protection Encapsulation; deliveries on `Messages`; `Silence`, `RefuseRegister` |
+| `sim` (gateway, v0.2.0) | `StartGateway`: the mqttsn module's 1.2 gateway with an in-process broker (`Publish`, `Subscribe`, `Published`) and `Silence`, `DropNext` |
 | `cmd/mqttsnsim` | a sensor that connects to a gateway and publishes readings (`-v2` for 2.0) |
 
-Requests are sequential: one call at a time per client. Not simulated:
-a gateway, DTLS, the forwarder encapsulation.
+Requests are sequential: one call at a time per client. Since v0.2.0 the
+clients are those of the mqttsn module's `client` package (which also
+has DTLS through its `dtls` package and the forwarder); this module adds
+the fault switches. Not simulated: a 2.0 gateway, a gateway over DTLS
+(use the mqttsn module's `dtls.Listen` with `gateway.New`).
 
 ## Install
 

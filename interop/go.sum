@@ -1,7 +1,7 @@
 github.com/cB-Sigma/iotcrypto v0.2.0 h1:UIbpl/o7aBLRh+xjSpSapkZbDIc+9TXMnmYQTX5NRW4=
 github.com/cB-Sigma/iotcrypto v0.2.0/go.mod h1:qqcIU57ZRRjeertK04N5SynNEfvXOV1M2PTp1iDLqww=
-github.com/cB-Sigma/mqttsn v0.1.0 h1:IgsbkM0AbL3MGKQbbBXL3uqtaOJ31VnkaQlpSyL+9i8=
-github.com/cB-Sigma/mqttsn v0.1.0/go.mod h1:d6Dxo34dCTVLKM2/TJ/qKzgAgX/WsWs/uOxaZIZyjno=
+github.com/cB-Sigma/mqttsn v0.2.0 h1:cOdzx+D387dSS84QFQLQA2F+PQ8+Vio8M+hkHXEoNvM=
+github.com/cB-Sigma/mqttsn v0.2.0/go.mod h1:MzJi4KM7a97aVCnpB9SFsED0mEu9lDH0X0gNq4XDZbw=
 github.com/xdg-go/pbkdf2 v1.0.0 h1:Su7DPu48wXMwC3bs7MCNG+z4FhcyEuz5dlvchbq0B0c=
 github.com/xdg-go/pbkdf2 v1.0.0/go.mod h1:jrpuAogTd400dnrH08LKmI/xc1MbPOebTwRqcT5RDeI=
 github.com/xdg-go/scram v1.2.0 h1:bYKF2AEwG5rqd1BumT4gAnvwU/M9nBp2pTSxeZw7Wvs=
