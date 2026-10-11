@@ -1,0 +1,45 @@
+mqttsn-sim (MQTT-SN 1.2 and 2.0 clients over UDP, in Go)
+Copyright 2026 Abhinav Gautam
+
+This module is licensed under the Apache License, Version 2.0 (LICENSE).
+
+The code was written for SigmaM2M, a oneM2M platform, from the MQTT-SN
+specifications listed in PROVENANCE.md. It contains no code from other
+projects. The source files that come from SigmaM2M (sim/) carry no
+per-file copyright header, the convention of the code they come from;
+the copyright line above covers them. Files added for this module carry
+"Copyright 2026 Abhinav Gautam" and "SPDX-License-Identifier: Apache-2.0".
+
+MQTT is a name used by OASIS. This module is not made, endorsed or
+supported by OASIS, IBM or the Eclipse Foundation.
+
+Dependencies
+------------
+
+- github.com/cB-Sigma/mqttsn (Apache-2.0, Copyright 2026 Abhinav
+  Gautam): the codecs.
+- github.com/cB-Sigma/iotcrypto (Apache-2.0, Copyright 2026 Abhinav
+  Gautam): SCRAM (sasl) for the 2.0 client, and AES-CCM through mqttsn.
+- github.com/xdg-go/scram, pbkdf2 and stringprep (Apache-2.0), through
+  iotcrypto.
+- golang.org/x/crypto, x/sys and x/text (BSD-3-Clause, Copyright The Go
+  Authors), indirectly.
+- The Go standard library (BSD-3-Clause, Copyright The Go Authors).
+
+Interop test peers (interop/, not part of the module's packages)
+------------------------------------------------------------------
+
+The nested test-only module interop/ builds the Eclipse Paho MQTT-SN
+gateway and sample clients (github.com/eclipse/paho.mqtt-sn.embedded-c,
+EPL-2.0 / EDL-1.0, Copyright IBM Corp., Tomoaki Yamaguchi and others) at
+a pinned commit from its sources, and installs Mosquitto (EPL-2.0 /
+EDL-1.0) from Debian, in a Docker container built on the tester's
+machine. The gateway settings and start script in interop/peer are ours
+(Apache-2.0). No Paho or Mosquitto source is included in this
+repository.
+
+Test data
+---------
+
+Client IDs, topics, keys and passwords in this module are made-up demo
+values.
